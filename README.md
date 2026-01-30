@@ -327,7 +327,7 @@ For detailed JSON Schema syntax, expression system, and component development gu
 
 ## License
 
-MIT License - see [LICENSE](../LICENSE) for details.
+Distributed under the AGPLv3 License. See [LICENSE.md](LICENSE.md) for more information.
 
 ---
 

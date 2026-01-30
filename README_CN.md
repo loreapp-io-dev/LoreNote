@@ -327,7 +327,7 @@ lore-note/
 
 ## 许可证
 
-MIT License - 详见 [LICENSE](../LICENSE)
+采用 AGPLv3 许可证发布。详见 [LICENSE.md](LICENSE.md)。
 
 ---
 
