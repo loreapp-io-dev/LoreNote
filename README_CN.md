@@ -250,26 +250,70 @@ v1.0.0 ────────────────────────�
 
 ---
 
-## 快速开始
+## 开发者指南
 
 ### 环境要求
 
-- Node.js 18+
-- pnpm
-- Rust（用于 Tauri）
+开始之前，请确保已安装以下工具：
 
-### 开发
+- **Node.js** 18+ ([下载](https://nodejs.org))
+- **pnpm** ([安装](https://pnpm.io/installation))
+- **Rust** ([安装](https://www.rust-lang.org/tools/install))
+- **系统依赖**（Tauri 所需）：
+  - **macOS**: Xcode Command Line Tools
+  - **Linux**: `build-essential`, `libwebkit2gtk-4.0-dev`, `libssl-dev`, `libgtk-3-dev`, `libayatana-appindicator3-dev`, `librsvg2-dev`
+  - **Windows**: Microsoft Visual Studio C++ Build Tools
+
+### 快速开始
 
 ```bash
+# 克隆仓库
+git clone https://github.com/yourusername/lore-note.git
+cd lore-note
+
 # 安装依赖
 pnpm install
 
-# 运行开发服务器
+# 运行开发服务器（支持热重载）
 pnpm run tauri dev
 
 # 构建生产版本
 pnpm run tauri build
 ```
+
+### 可用命令
+
+| 命令 | 说明 |
+|------|------|
+| `pnpm install` | 安装所有依赖 |
+| `pnpm run tauri dev` | 启动 Tauri 开发服务器 |
+| `pnpm run tauri build` | 构建当前平台的生产应用 |
+| `pnpm dev` | 仅启动 Vite 开发服务器（前端） |
+| `pnpm build` | 仅构建前端 |
+| `pnpm tsc --noEmit` | 运行 TypeScript 类型检查 |
+
+### 项目结构
+
+```
+lore-note/
+├── src/                    # 前端源代码
+│   ├── components/         # React 组件
+│   ├── engine-v8/          # JSON Schema 渲染引擎
+│   ├── features/           # 功能模块
+│   ├── services/           # 业务逻辑层
+│   ├── stores/             # Zustand 状态管理
+│   └── types/              # TypeScript 类型定义
+├── src-tauri/              # Tauri 后端（Rust）
+│   ├── src/                # Rust 源代码
+│   ├── icons/              # 应用图标
+│   └── capabilities/       # Tauri 权限配置
+├── public/                 # 静态资源
+└── package.json            # 依赖与脚本
+```
+
+### 贡献
+
+欢迎贡献！请随时提交 Issue 和 Pull Request。
 
 ---
 

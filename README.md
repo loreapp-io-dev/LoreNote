@@ -250,26 +250,70 @@ v1.0.0 ────────────────────────�
 
 ---
 
-## Getting Started
+## For Developers
 
 ### Prerequisites
 
-- Node.js 18+
-- pnpm
-- Rust (for Tauri)
+Before you begin, ensure you have the following installed:
 
-### Development
+- **Node.js** 18+ ([Download](https://nodejs.org))
+- **pnpm** ([Install](https://pnpm.io/installation))
+- **Rust** ([Install](https://www.rust-lang.org/tools/install))
+- **System Dependencies** (for Tauri):
+  - **macOS**: Xcode Command Line Tools
+  - **Linux**: `build-essential`, `libwebkit2gtk-4.0-dev`, `libssl-dev`, `libgtk-3-dev`, `libayatana-appindicator3-dev`, `librsvg2-dev`
+  - **Windows**: Microsoft Visual Studio C++ Build Tools
+
+### Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/lore-note.git
+cd lore-note
+
 # Install dependencies
 pnpm install
 
-# Run development server
+# Run development server (with hot reload)
 pnpm run tauri dev
 
 # Build for production
 pnpm run tauri build
 ```
+
+### Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `pnpm install` | Install all dependencies |
+| `pnpm run tauri dev` | Start development server with Tauri |
+| `pnpm run tauri build` | Build production app for your platform |
+| `pnpm dev` | Start Vite dev server only (frontend) |
+| `pnpm build` | Build frontend only |
+| `pnpm tsc --noEmit` | Run TypeScript type checking |
+
+### Project Structure
+
+```
+lore-note/
+├── src/                    # Frontend source code
+│   ├── components/         # React components
+│   ├── engine-v8/          # JSON Schema render engine
+│   ├── features/           # Feature modules
+│   ├── services/           # Business logic layer
+│   ├── stores/             # Zustand state management
+│   └── types/              # TypeScript type definitions
+├── src-tauri/              # Tauri backend (Rust)
+│   ├── src/                # Rust source code
+│   ├── icons/              # App icons
+│   └── capabilities/       # Tauri permissions
+├── public/                 # Static assets
+└── package.json            # Dependencies & scripts
+```
+
+### Contributing
+
+We welcome contributions! Please feel free to submit issues and pull requests.
 
 ---
 
