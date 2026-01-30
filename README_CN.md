@@ -315,6 +315,19 @@ lore-note/
 
 欢迎贡献！请随时提交 Issue 和 Pull Request。
 
+### 发布流程
+
+创建新版本并自动编译所有平台的安装包：
+
+```bash
+# 快速发布
+./release.sh v0.2.0
+```
+
+这将通过 GitHub Actions 自动构建 macOS、Linux 和 Windows 的安装程序。
+
+详细说明请查看 [.github/RELEASE.md](.github/RELEASE.md)。
+
 ---
 
 ## 文档

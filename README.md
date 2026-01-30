@@ -315,6 +315,19 @@ lore-note/
 
 We welcome contributions! Please feel free to submit issues and pull requests.
 
+### Release Process
+
+To create a new release with automated builds for all platforms:
+
+```bash
+# Quick release
+./release.sh v0.2.0
+```
+
+This will automatically build installers for macOS, Linux, and Windows via GitHub Actions.
+
+For detailed instructions, see [.github/RELEASE.md](.github/RELEASE.md).
+
 ---
 
 ## Documentation
