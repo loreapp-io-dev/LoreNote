@@ -55,3 +55,35 @@ jobs:
         with:
           tagName: ${{ github.ref_name }}
           releaseName: 'LoreNote ${{ github.ref_name }}'
+          releaseBody: |
+            ## 🎉 What's New in ${{ github.ref_name }}
+
+            ### ✨ Features
+            - New feature descriptions here
+
+            ### 🐛 Bug Fixes
+            - Bug fix descriptions here
+
+            ### 📦 Downloads
+
+            Choose the installer for your platform:
+
+            | Platform | File | Description |
+            |----------|------|-------------|
+            | 🍎 macOS (Apple Silicon) | `LoreNote_*_aarch64.dmg` | For M1/M2/M3 Macs |
+            | 🍎 macOS (Intel) | `LoreNote_*_x64.dmg` | For Intel Macs |
+            | 🐧 Linux (Debian/Ubuntu) | `lore-note_*_amd64.deb` | .deb package |
+            | 🐧 Linux (Universal) | `lore-note_*_amd64.AppImage` | Portable AppImage |
+            | 🪟 Windows | `LoreNote_*_x64-setup.exe` | Installer |
+            | 🪟 Windows | `LoreNote_*_x64.msi` | MSI package |
+
+            ### 📝 Full Changelog
+
+            See all changes: https://github.com/loreapp-io-dev/LoreNote/compare/v0.1.0...${{ github.ref_name }}
+
+            ---
+
+            **Note**: First time installing? Check our [installation guide](https://github.com/loreapp-io-dev/LoreNote#for-developers).
+          releaseDraft: false
+          prerelease: false
+
