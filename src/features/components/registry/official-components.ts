@@ -1,0 +1,263 @@
+/**
+ * 官方组件定义
+ * 统一数据源，同时服务于斜杠菜单和组件库
+ */
+
+import type { RegisteredComponent } from './types';
+import {
+  createTextSchema,
+  createHeadingSchema,
+  createListSchema,
+  createCalloutSchema,
+  createTableSchema,
+  createDividerSchema,
+  createNoteLinkSchema,
+  createWebLinkSchema,
+} from '@/engine-v8';
+
+const now = new Date().toISOString();
+
+/**
+ * 官方组件列表
+ * 与斜杠命令完全一致的 10 个组件
+ */
+export const officialComponents: RegisteredComponent[] = [
+  // ===== 文本 =====
+  {
+    id: 'official-text',
+    type: 'text',
+    name: 'componentLibrary.components.text',
+    description: 'componentLibrary.components.textDesc',
+    icon: 'Type',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['text', 'paragraph', '文本', '段落'],
+    tags: ['text', 'paragraph', 'basic'],
+    schema: createTextSchema(),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 标题 1 =====
+  {
+    id: 'official-heading1',
+    type: 'heading1',
+    name: 'componentLibrary.components.heading1',
+    description: 'componentLibrary.components.heading1Desc',
+    icon: 'Heading1',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['heading1', 'h1', '标题1', '大标题'],
+    tags: ['heading', 'title', 'h1'],
+    schema: createHeadingSchema({ level: 1 }),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 标题 2 =====
+  {
+    id: 'official-heading2',
+    type: 'heading2',
+    name: 'componentLibrary.components.heading2',
+    description: 'componentLibrary.components.heading2Desc',
+    icon: 'Heading2',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['heading2', 'h2', '标题2', '中标题'],
+    tags: ['heading', 'title', 'h2'],
+    schema: createHeadingSchema({ level: 2 }),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 标题 3 =====
+  {
+    id: 'official-heading3',
+    type: 'heading3',
+    name: 'componentLibrary.components.heading3',
+    description: 'componentLibrary.components.heading3Desc',
+    icon: 'Heading3',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['heading3', 'h3', '标题3', '小标题'],
+    tags: ['heading', 'title', 'h3'],
+    schema: createHeadingSchema({ level: 3 }),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 项目符号列表 =====
+  {
+    id: 'official-bulletList',
+    type: 'bulletList',
+    name: 'componentLibrary.components.bulletList',
+    description: 'componentLibrary.components.bulletListDesc',
+    icon: 'List',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['bullet', 'list', '无序列表', '项目符号'],
+    tags: ['list', 'bullet', 'unordered'],
+    schema: createListSchema({ listType: 'bullet' }),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 有序列表 =====
+  {
+    id: 'official-numberedList',
+    type: 'numberedList',
+    name: 'componentLibrary.components.numberedList',
+    description: 'componentLibrary.components.numberedListDesc',
+    icon: 'ListOrdered',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['numbered', 'ordered', 'list', '有序列表', '编号列表'],
+    tags: ['list', 'numbered', 'ordered'],
+    schema: createListSchema({ listType: 'numbered' }),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 待办清单 =====
+  {
+    id: 'official-todoList',
+    type: 'todoList',
+    name: 'componentLibrary.components.todoList',
+    description: 'componentLibrary.components.todoListDesc',
+    icon: 'CheckSquare',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['todo', 'task', 'checkbox', '待办', '任务'],
+    tags: ['list', 'todo', 'task', 'checkbox'],
+    schema: createListSchema({ listType: 'todo' }),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 标注 =====
+  {
+    id: 'official-callout',
+    type: 'callout',
+    name: 'componentLibrary.components.callout',
+    description: 'componentLibrary.components.calloutDesc',
+    icon: 'AlertCircle',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['callout', 'alert', 'info', '标注', '提示'],
+    tags: ['callout', 'alert', 'info', 'warning'],
+    schema: createCalloutSchema(),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 表格 =====
+  {
+    id: 'official-table',
+    type: 'table',
+    name: 'componentLibrary.components.table',
+    description: 'componentLibrary.components.tableDesc',
+    icon: 'Table',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['table', 'grid', '表格', '数据'],
+    tags: ['table', 'grid', 'data'],
+    schema: createTableSchema(),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 分隔线 =====
+  {
+    id: 'official-divider',
+    type: 'divider',
+    name: 'componentLibrary.components.divider',
+    description: 'componentLibrary.components.dividerDesc',
+    icon: 'Minus',
+    category: 'basic',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['divider', 'hr', 'separator', '分隔线', '分割线'],
+    tags: ['divider', 'separator', 'line'],
+    schema: createDividerSchema(),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 笔记链接 =====
+  {
+    id: 'official-noteLink',
+    type: 'noteLink',
+    name: 'componentLibrary.components.noteLink',
+    description: 'componentLibrary.components.noteLinkDesc',
+    icon: 'FileText',
+    category: 'embed',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['note', 'link', 'page', 'reference', '笔记', '笔记链接', '内链'],
+    tags: ['note', 'link', 'internal'],
+    schema: createNoteLinkSchema(),
+    createdAt: now,
+    updatedAt: now,
+  },
+  // ===== 网页链接 =====
+  {
+    id: 'official-webLink',
+    type: 'webLink',
+    name: 'componentLibrary.components.webLink',
+    description: 'componentLibrary.components.webLinkDesc',
+    icon: 'ExternalLink',
+    category: 'embed',
+    source: 'official',
+    version: '1.0.0',
+    author: 'LoreNote',
+    installed: true,
+    enabled: true,
+    keywords: ['web', 'link', 'url', 'external', '网页', '网页链接', '外链'],
+    tags: ['web', 'link', 'external'],
+    schema: createWebLinkSchema(),
+    createdAt: now,
+    updatedAt: now,
+  },
+];
+
+/** 根据 ID 获取官方组件 */
+export function getOfficialComponentById(id: string): RegisteredComponent | undefined {
+  return officialComponents.find((c) => c.id === id);
+}
+
+/** 根据类型获取官方组件 */
+export function getOfficialComponentByType(type: string): RegisteredComponent | undefined {
+  return officialComponents.find((c) => c.type === type);
+}
