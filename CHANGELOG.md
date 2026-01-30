@@ -19,6 +19,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 -
 
+## [0.2.1] - 2026-01-30
+
+### Added
+- Enhanced release notes template with comprehensive download instructions
+- Automatic release body generation in GitHub Actions workflow
+- CHANGELOG.md for version history tracking
+
+### Improved
+- Release workflow now includes detailed feature descriptions and platform-specific download guide
+- Better documentation for release process
+
 ## [0.2.0] - 2026-01-30
 
 ### Added
@@ -47,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Developer tools (Schema editor, template library, debug console)
 - Multiple block types (text, heading, list, table, media, etc.)
 
-[Unreleased]: https://github.com/loreapp-io-dev/LoreNote/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/loreapp-io-dev/LoreNote/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/loreapp-io-dev/LoreNote/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/loreapp-io-dev/LoreNote/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/loreapp-io-dev/LoreNote/releases/tag/v0.1.0
