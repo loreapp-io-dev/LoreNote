@@ -59,10 +59,18 @@ jobs:
             ## 🎉 What's New in ${{ github.ref_name }}
 
             ### ✨ Features
-            - New feature descriptions here
+            - **Automated Version Management**: Release script now automatically updates version numbers across all configuration files
+            - **Enhanced Release Notes**: Automatic generation of comprehensive release documentation
+            - **Changelog Tracking**: Added CHANGELOG.md for version history management
 
             ### 🐛 Bug Fixes
-            - Bug fix descriptions here
+            - Fixed Tauri plugin version mismatch between npm and Rust packages
+            - Resolved build failures in GitHub Actions workflow
+
+            ### 🔧 Improvements
+            - Improved release automation workflow
+            - Added release notes template for consistent documentation
+            - Enhanced developer documentation with detailed release process
 
             ### 📦 Downloads
 
