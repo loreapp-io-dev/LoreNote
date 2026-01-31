@@ -15,6 +15,7 @@ import {
 import { useVaultStore, useSettingsStore } from '@/stores';
 import { useI18n } from '@/i18n';
 import { useVault } from '../hooks/useVault';
+import { APP_VERSION } from '@/constants/version';
 
 interface VaultSelectorProps {
   onVaultOpen: () => void;
@@ -596,7 +597,7 @@ export function VaultSelector({ onVaultOpen }: VaultSelectorProps) {
                   L
                 </div>
                 <h3 className="text-lg font-semibold text-neutral-800 dark:text-[#dcddde]">LoreNote</h3>
-                <p className="text-sm text-neutral-500 dark:text-[#888]">{t.aboutDialog.version} 0.1.0 Beta</p>
+                <p className="text-sm text-neutral-500 dark:text-[#888]">{t.aboutDialog.version} {APP_VERSION}</p>
               </div>
               <p className="mb-4 text-center text-sm text-neutral-600 dark:text-[#888]">
                 {t.aboutDialog.description}

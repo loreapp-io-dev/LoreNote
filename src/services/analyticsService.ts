@@ -4,10 +4,10 @@
  */
 
 import { BaseDirectory, readTextFile, writeTextFile, mkdir, exists } from '@tauri-apps/plugin-fs';
+import { APP_VERSION } from '@/constants/version';
 
 const API_URL = 'https://lorenote.app/api/heartbeat';
 const HEARTBEAT_INTERVAL = 5 * 60 * 1000; // 5 minutes
-const APP_VERSION = '0.2.0';
 const ANALYTICS_FILE = 'analytics.json';
 
 let heartbeatTimer: number | null = null;

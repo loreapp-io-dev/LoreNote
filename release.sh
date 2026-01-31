@@ -40,11 +40,18 @@ if [ -f "src-tauri/tauri.conf.json" ]; then
   echo "✅ Updated src-tauri/tauri.conf.json"
 fi
 
+# 更新 src/constants/version.ts
+if [ -f "src/constants/version.ts" ]; then
+  sed -i.bak "s/export const APP_VERSION = '[^']*'/export const APP_VERSION = '$VERSION_NUMBER'/" src/constants/version.ts
+  rm src/constants/version.ts.bak
+  echo "✅ Updated src/constants/version.ts"
+fi
+
 # 检查是否有更改
 if [[ -n $(git status -s) ]]; then
   echo ""
   echo "📝 Version numbers updated. Committing changes..."
-  git add package.json src-tauri/Cargo.toml src-tauri/tauri.conf.json
+  git add package.json src-tauri/Cargo.toml src-tauri/tauri.conf.json src/constants/version.ts
   git commit -m "chore: Bump version to $VERSION_NUMBER"
   git push origin main
   echo "✅ Changes committed and pushed"
